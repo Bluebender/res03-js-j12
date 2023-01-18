@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS - Exercice 3</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <main>
+        
+        <h1>Ma liste de nombres</h1>
+        <ul id="app">
+            <template v-for="number in numbers">
+                <li v-if="number % 2 === 0" class="red">{{ number }}</li>
+                <li v-else class="blue">{{ number }}</li>
+            </template>
+        </ul>
+
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

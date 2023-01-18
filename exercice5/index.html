@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS - Exercice 5</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <main>
+
+        <section id="app">
+            <h1>Ma liste des choses à faire</h1>
+
+            <ul>
+                <template v-for="note in notes">
+                    <li v-if="note.done === false">
+                        {{ note.text }} <button @click="removeNote(note)">Done</button>
+                    </li>
+                    <li v-else class="cross">
+                        {{ note.text }}
+                    </li>
+                </template>
+            </ul>
+
+            <form @submit.prevent="addNote">  
+                <fieldset>            
+                    <label for="note">Saisir la note</label>  
+                    <input type="text" name="note" id="note" />  
+                </fieldset>        
+                <button type="submit">Ajouter</button>  
+            </form>
+
+        </section>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

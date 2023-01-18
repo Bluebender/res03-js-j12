@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+</head>
+
+<body>
+    <main>
+
+        <section id="app">
+            <!--<p>{{ animal }}</p>-->
+            <button @click="changeAnimal">Change animal</button>
+
+            <h1 v-if="animal === 'Dogs'">Dogs</h1>
+            <h1 v-else-if="animal === 'Cats'">Cats</h1>
+            <h1 v-else>Not Dogs or Cats</h1>
+        </section>
+        
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
